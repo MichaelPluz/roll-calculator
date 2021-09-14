@@ -1,0 +1,75 @@
+<v-card
+        class="pa-2"
+        flat
+>
+    <roll-calc-result  :message="message" :dialog="dialog"></roll-calc-result>
+
+    <v-card-text>
+        <v-form ref="form" v-model="valid">
+
+            <v-text-field v-model="weight" type="number" min="0" outlined dense
+                          label="Weight"
+                          @keypress="currency($event)"
+                          :rules="numberRules"
+                          required
+            ></v-text-field>
+
+
+            <v-text-field v-model="width" type="number" min="0" outlined dense
+                          label="Width"
+                          @keypress="currency($event)"
+                          :rules="numberRules"
+                          required
+            ></v-text-field>
+
+            <v-text-field v-model="thickness" type="number" min="0" outlined dense
+                          label="Thickness"
+                          @keypress="currency($event)"
+                          :rules="numberRules"
+                          required
+            ></v-text-field>
+
+            <v-radio-group
+                    v-model="diameter"
+                    dense
+                    row
+                    class="border-1 my-0"
+                    required
+                    :rules="requiredRules"
+                    outlined
+            >
+                <template v-slot:label>
+                    <span style="font-size: larger;">Core Diameter:</span>
+                </template>
+                <v-radio
+                        label="3"
+                        value="3"
+                ></v-radio>
+                <v-radio
+                        label="6"
+                        value="6"
+                ></v-radio>
+            </v-radio-group>
+
+            <v-select
+                    v-model="filmType"
+                    outlined dense
+                    :items="[1,2,3,4]"
+                    label="Film Type"
+                    required
+                    :rules="requiredRules"
+            ></v-select>
+        </v-form>
+    </v-card-text>
+
+    <v-card-actions>
+        <v-btn
+                color="primary"
+                outlined dense
+                @click="Calculate"
+        >Calculate
+        </v-btn>
+    </v-card-actions>
+</v-card>
+
+

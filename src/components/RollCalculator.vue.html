@@ -1,0 +1,38 @@
+<v-app id="app">
+    <v-content>
+        <v-container class="pt-0">
+            <v-card tile class="mx-auto" max-width="400px">
+                <v-tabs
+                        v-model="tab"
+                        background-color="primary"
+                        dark
+                        flat
+                >
+                    <v-tab>
+                        {{ tabTitles[0] }}
+                    </v-tab>
+                    <v-tab>
+                        {{ tabTitles[1] }}
+                    </v-tab>
+                    <v-tab>
+                        {{ tabTitles[2] }}
+                    </v-tab>
+                </v-tabs>
+
+                <v-tabs-items v-model="tab">
+                    <v-tab-item>
+                        <RollCalc1/>
+                    </v-tab-item>
+                    <v-tab-item>
+                        <RollCalc2/>
+                    </v-tab-item>
+                    <v-tab-item>
+                        <RollAbout/>
+                    </v-tab-item>
+                </v-tabs-items>
+            </v-card>
+        </v-container>
+    </v-content>
+</v-app>
+
+
