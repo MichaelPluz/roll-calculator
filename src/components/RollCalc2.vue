@@ -19,7 +19,6 @@
         },
         data: function () {
             return {
-                // all variables added dynamically in created from  fields
                 weight: 2,
                 width: 2,
                 thickness: 2,
@@ -38,13 +37,6 @@
                 dialog: false,
             }
         },
-        // created: function () {
-        //     // add variables: length, ... and  lengthInvalid, ...
-        //     for (const field of fields) {
-        //         this.$data[field] = 1; // TODO:
-        //     }
-        //
-        // },
         methods:
             {
                 roundCur,
@@ -63,10 +55,6 @@
 
                     this.dialog = true;
                 }
-            },
-        watch: {
-            // watchers  added dynamically in created from  fields
-        }
-
+            }
     }
 </script>

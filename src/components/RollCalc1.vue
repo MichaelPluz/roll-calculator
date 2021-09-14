@@ -5,7 +5,6 @@
     import {CalculateRollWeight, CalculateRollDiameter, format} from "../RollCalculator"
     import RollCalcResult from "./RollCalcResult";
 
-
     //const fields = ['length', 'thickness', 'diameter', 'width', 'filmType'];
     /**
      * Precision: -1 - do not round; 0 - round to Integer; >0 - precision (number of signs after dot)
@@ -20,7 +19,6 @@
         },
         data: function () {
             return {
-                // all variables added dynamically in created from  fields
                 length: 1,
                 thickness: 1,
                 diameter: '3',
@@ -39,13 +37,6 @@
                 dialog: false,
             }
         },
-        // created: function () {
-        //     // add variables: length, ... and  lengthInvalid, ...
-        //     for (const field of fields) {
-        //         this.$data[field] = 1; // TODO:
-        //     }
-        //
-        // },
         methods:
             {
                 roundCur,
@@ -64,10 +55,6 @@
 
                     this.dialog = true;
                 }
-            },
-        watch: {
-            // watchers  added dynamically in created from  fields
-        }
-
+            }
     }
 </script>

@@ -3,7 +3,7 @@
             class="pa-2"
             flat
     >
-        <roll-calc-result  :message="message" :dialog="dialog"></roll-calc-result>
+        <roll-calc-result :message="message" :dialog="dialog" @close-dialog="dialog = false"></roll-calc-result>
 
         <v-card-text>
             <v-form ref="form" v-model="valid">
