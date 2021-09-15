@@ -1,11 +1,18 @@
 {
   "name": "roll-calc-vuetify",
   "version": "0.1.0",
-  "private": true,
+  "description": "Roll Calculator - Vue + Vuetify",
+  "licence": "GPLv2",
+  "author": "Michael Pluznikov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelPluz/roll-calculator"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
