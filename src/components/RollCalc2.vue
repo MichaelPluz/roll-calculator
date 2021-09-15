@@ -19,11 +19,11 @@
         },
         data: function () {
             return {
-                weight: 2,
-                width: 2,
-                thickness: 2,
-                diameter: '3',
-                filmType: 3,
+                weight: '',
+                width: '',
+                thickness: '',
+                diameter: '',
+                filmType: '',
                 
                 message: '',
                 valid: false,
